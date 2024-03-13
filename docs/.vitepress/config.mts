@@ -1,28 +1,18 @@
-import { defineConfig } from 'vitepress'
-
+import {defineConfig} from 'vitepress'
+import {en_us} from './i18/en_us'
+import {zh_cn} from './i18/zh_cn'
+import {shared} from './shared'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Whale Music Docs",
-  description: "whale music docs",
-  themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
-    ],
-
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
+    ...shared,
+    locales: {
+        'i18/en_us': {
+            label: 'English',
+            ...en_us
+        },
+        'i18/zh_cn': {
+            label: '简体中文',
+            ...zh_cn
+        }
+    }
 })

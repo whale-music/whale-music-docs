@@ -1,25 +1,13 @@
----
-# https://vitepress.dev/reference/default-theme-home-page
-layout: home
-
-hero:
-  name: "Whale Music Docs"
-  text: "whale music docs"
-  tagline: My great project tagline
-  actions:
-    - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
-
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
----
-
+<script setup>
+try {
+    const lang = navigator.language.toLowerCase().replace("-", "_");
+    const flag = lang === "zh_cn" || lang === "en_us";
+    if (flag) {
+        window.location.href = `/i18/${lang}/`;
+    } else {
+        window.location.href = "/i18/en_us";
+    }
+} catch (e) {
+    window.location.href = "/i18/en_us";
+}
+</script>
