@@ -2,7 +2,7 @@ import {defineConfig} from 'vitepress'
 import {search as zhSearch} from "./i18/zh_cn";
 
 export const shared = defineConfig({
-    base: '/whale-music-docs/',
+    base: '/',
     title: 'Whale Music Docs',
     description: "whale music docs",
     lastUpdated: true,
