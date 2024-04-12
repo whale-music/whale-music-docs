@@ -1,18 +1,17 @@
 <script setup>
 import { inBrowser } from 'vitepress';
 if (inBrowser) {
-    const base = '/';
     try {
         const lang = navigator.language.toLowerCase().replace("-", "_");
         const flag = lang === "zh_cn" || lang === "en_us";
         if (flag) {
-            window.location.href = `${base}/i18/${lang}/`;
+            window.location.href = `/i18/${lang}/`;
         } else {
-            window.location.href = `${base}/i18/en_us`;
+            window.location.href = `/i18/en_us`;
         }
     } catch (e) {
         console.error(e);
-        window.location.href = `${base}/i18/en_us`;
+        window.location.href = `/i18/en_us`;
     }
 }
 </script>
