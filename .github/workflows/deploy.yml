@@ -39,6 +39,9 @@ jobs:
           node-version: 20
          # cache: npm # 或 pnpm / yarn
       - uses: pnpm/action-setup@v3 # 如果使用 pnpm，请取消注释
+        with:
+          version: 8
+          run_install: false
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install dependencies
