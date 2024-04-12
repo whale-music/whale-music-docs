@@ -51,7 +51,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             text: 'Install',
             collapsed: false,
             items: [
-                {text: 'Quick start', link: 'quick-start'},
+                {text: 'Quick start(jar)', link: 'quick-start'},
                 {text: 'Deploy', link: 'deploy'}
             ]
         },

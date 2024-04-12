@@ -73,7 +73,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             text: '安装',
             collapsed: false,
             items: [
-                { text: '快速开始', link: 'quick-start' },
+                { text: '快速开始(jar)', link: 'quick-start' },
                 { text: '部署', link: 'deploy' },
             ]
         },

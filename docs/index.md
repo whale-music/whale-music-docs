@@ -8,6 +8,7 @@ try {
         window.location.href = "/i18/en_us";
     }
 } catch (e) {
+    console.error(e);
     window.location.href = "/i18/en_us";
 }
 </script>
