@@ -1,7 +1,7 @@
 <script setup>
 import { inBrowser } from 'vitepress';
 if (inBrowser) {
-    const base = '/whale-music-docs';
+    const base = '/';
     try {
         const lang = navigator.language.toLowerCase().replace("-", "_");
         const flag = lang === "zh_cn" || lang === "en_us";

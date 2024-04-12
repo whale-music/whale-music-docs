@@ -3,7 +3,7 @@ import {search as zhSearch} from "./i18/zh_cn";
 
 export const shared = defineConfig({
     // 修改次配置时，需要同时修改docs/index.md
-    base: '/whale-music-docs',
+    base: '/',
     title: 'Whale Music Docs',
     description: "whale music docs",
     lastUpdated: true,
