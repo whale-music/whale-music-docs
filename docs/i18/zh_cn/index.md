@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Whale Music"
-  text: "一个音乐管理平台"
+  text: "音乐流媒体管理平台"
   tagline: ""
   actions:
     - theme: brand
@@ -35,7 +35,7 @@ features:
     details: 支持Webdav，Subsonic，等音乐客户端的连接
   - title: 更多
     icon: <i class="fa-solid fa-paper-plane"></i>
-    details: 后续将支持更多音乐协议，客户端，并将不断完善whale-music
+    details: 后续将支持更多音乐协议与客户端，同时会加入对硬件（单片机，嵌入式）支持。
 ---
 
 <style>
