@@ -10,6 +10,7 @@ export const zh_cn = defineConfig({
 
         sidebar: {
             '/i18/zh_cn/guide/': { base: '/i18/zh_cn/guide/', items: sidebarGuide() },
+            '/i18/zh_cn/config/': { base: '/i18/zh_cn/config/', items: sidebarConfig() },
             '/i18/zh_cn/api/': { base: '/i18/zh_cn/api/', items: sidebarApi() },
         },
 
@@ -56,13 +57,26 @@ function nav(): DefaultTheme.NavItem[] {
         },
         {
             text: '配置',
-            link: '/i18/zh_cn/config/configuration',
+            link: '/i18/zh_cn/config/global-configuration',
             activeMatch: '/i18/zh_cn/config/'
         },
         {
             text: 'API',
             link: '/i18/zh_cn/api/index',
             activeMatch: '/i18/zh_cn/api/'
+        },
+    ]
+}
+
+
+function sidebarConfig(): DefaultTheme.SidebarItem[] {
+    return [
+        {
+            text: '配置',
+            collapsed: false,
+            items: [
+                { text: '全局配置', link: 'global-configuration' },
+            ]
         },
     ]
 }

@@ -1,28 +1,28 @@
 # 部署
 
+工具链
+
+| 供应商                                                       | 工具链 | Window(x64)                                                  | Linux(x64)                                                   |
+| ------------------------------------------------------------ | ------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [openjdk](https://mirrors.tuna.tsinghua.edu.cn/) (清华镜像源) | jre    | [地址](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/21/jre/x64/windows/OpenJDK21U-jre_x64_windows_hotspot_21.0.2_13.zip) | [地址](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/21/jre/x64/linux/OpenJDK21U-jre_x64_linux_hotspot_21.0.2_13.tar.gz) |
+| [openjdk](https://mirrors.huaweicloud.com/home)(华为镜像源)  | jdk    | [地址](https://mirrors.huaweicloud.com/openjdk/21.0.1/openjdk-21.0.1_windows-x64_bin.zip) | [地址](https://mirrors.huaweicloud.com/openjdk/21.0.1/openjdk-21.0.1_linux-x64_bin.tar.gz) |
+| [openjdk](https://openjdk.org/)(官网)                        | jdk    | [地址](https://download.java.net/openjdk/jdk21/ri/openjdk-21+35_windows-x64_bin.zip) | [地址](https://download.java.net/openjdk/jdk21/ri/openjdk-21+35_linux-x64_bin.tar.gz) |
+| [oracle](https://www.oracle.com/sg/java/technologies/downloads/)(官网) | jdk    | [地址](https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.zip) | [地址](https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.tar.gz) |
+
 ## Windows
-
-工具链(Windos端)
-
-| 供应商               | 工具链 | 地址                                                         |
-| -------------------- | ------ | ------------------------------------------------------------ |
-| openjdk (清华镜像源) | jre    | [地址](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/17/jre/x64/windows/OpenJDK17U-jre_x64_windows_hotspot_17.0.10_7.zip) |
-| openjdk(华为镜像源)  | jdk    | [地址](https://mirrors.huaweicloud.com/openjdk/17.0.2/openjdk-17.0.2_windows-x64_bin.zip) |
-| openjdk(官网)        | jdk    | [地址](https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_windows-x64_bin.zip) |
-| oracle(官网)         | jdk    | [地址](https://download.oracle.com/java/17/archive/jdk-17.0.10_windows-x64_bin.zip) |
 
 ### 手动安装
 
 > 推荐下载jre，占用空间更小。
 
 ```bash
-wget https://mirrors.tuna.tsinghua.edu.cn/Adoptium/17/jre/x64/windows/OpenJDK17U-jre_x64_windows_hotspot_17.0.10_7.zip -O OpenJDK17.zip
+wget https://mirrors.tuna.tsinghua.edu.cn/Adoptium/21/jre/x64/windows/OpenJDK21U-jre_x64_windows_hotspot_21.0.2_13.zip -O OpenJDK21.zip
 ```
 
 解压到当前目录（也可以使用[7-Zip](https://7-zip.org/)等工具解压）
 
 ```bash
-unzip OpenJDK17.zip
+unzip OpenJDK21.zip
 ```
 
 下载whale music jar
@@ -35,20 +35,20 @@ wget https://github.com/whale-music/whale/releases/latest/download/whale-music.j
 
 ```bash
 .
-├── jdk-17.0.10+7-jre
+├── jdk-21.0.2+13-jre
 └── whale-music.jar
 ```
 
 在当前目录执行命令
 
 ```bash
-./jdk-17.0.10+7-jre/bin/java -jar whale-music.jar
+./jdk-21.0.2+13-jre/bin/java -jar whale-music.jar
 ```
 
 查看密码
 
 ```bash
-./jdk-17.0.10+7-jre/bin/java -jar whale-music.jar admin
+./jdk-21.0.2+13-jre/bin/java -jar whale-music.jar admin
 ```
 
 
@@ -80,14 +80,14 @@ sdk version
 安装jdk17
 
 ```bash
-sdk install java 17.0.10-oracle
+sdk install java 21.0.2-open
 ```
 
 添加jdk到环境变量
 
 ```bash
-sdk default java 17.0.10-oracle # 永久
-sdk use java17.0.10-oracle      # 临时
+sdk default java 21.0.2-open # 永久
+sdk use java 21.0.2-open     # 临时
 ```
 
 
@@ -97,13 +97,13 @@ sdk use java17.0.10-oracle      # 临时
 Debian/Ubuntu
 
 ```bash
-sudo apt update -y && sudo apt install openjdk-17-jdk -y
+sudo apt update -y && sudo apt install openjdk-21-jre -y
 ```
 
 Mac
 
 ```bash
-brew install openjdk@17
+brew install openjdk@21
 ```
 
 
@@ -111,21 +111,21 @@ brew install openjdk@17
 ### 手动安装
 
 - [Oracle](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
-- [Adoptium](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/17/jre/)(清华源)
+- [Adoptium](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/21/jre/)(清华源)
 - [OpenJdk](https://mirrors.huaweicloud.com/openjdk/17.0.2/)(华为源)
 
 #### Linux
 
-以[Oracle](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)为例
+以[清华源](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/21/jre/)为例
 
 ```bash
-wget https://download.oracle.com/java/17/archive/jdk-17.0.10_linux-x64_bin.tar.gz
+wget https://mirrors.tuna.tsinghua.edu.cn/Adoptium/21/jre/x64/linux/OpenJDK21U-jre_x64_linux_hotspot_21.0.2_13.tar.gz
 ```
 
 解压
 
 ```bash
-tar xzvf jdk-17.0.10_linux-x64_bin.tar.gz
+tar xzvf OpenJDK21U-jre_x64_linux_hotspot_21.0.2_13.tar.gz
 ```
 
 下载whale-music.jar
@@ -137,24 +137,18 @@ wget https://github.com/whale-music/whale/releases/latest/download/whale-music.j
 运行
 
 ```bash
-./jdk-17.0.10/bin/java -jar whale-music.jar
+./jdk-21.0.2+13-jre/bin/java -jar whale-music.jar
 ```
 
 #### MacOS 
 
-下载
+下载完成后点击安装
 
 ```bash
 # x64
-wget https://download.oracle.com/java/17/archive/jdk-17.0.10_macos-x64_bin.tar.gz -O jdk_bin.tar.gz
+wget https://download.oracle.com/java/21/latest/jdk-21_macos-x64_bin.dmg
 # arm
-wget https://download.oracle.com/java/17/archive/jdk-17.0.10_macos-aarch64_bin.tar.gz -O jdk_bin.tar.gz
-```
-
-解压
-
-```bash
-tar xzvf jdk_bin.tar.gz
+wget https://download.oracle.com/java/21/latest/jdk-21_macos-aarch64_bin.tar.gz
 ```
 
 下载whale-music.jar
@@ -166,6 +160,6 @@ wget https://github.com/whale-music/whale/releases/latest/download/whale-music.j
 运行
 
 ```bash
-./jdk-17.0.10/bin/java -jar whale-music.jar
+java -jar whale-music.jar
 ```
 
