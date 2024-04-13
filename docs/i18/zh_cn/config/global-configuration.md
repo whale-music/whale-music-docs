@@ -42,19 +42,30 @@
 
 ## 文档生成配置
 
-| 配置                             | 描述                  | 默认参数                                                     |
-| -------------------------------- | --------------------- | ------------------------------------------------------------ |
-| springdoc.api-docs.enabled       | 启用Spring文档功能    | true                                                         |
-| springdoc.api-docs.path          | Spring文档路径        | /v3/api-docs                                                 |
-| springdoc.swagger-ui.path        | Swagger UI路径        | /docs                                                        |
-| springdoc.packages-to-scan       | Swagger 扫描包路径    | org.web                                                      |
-| springdoc.pre-loading-enabled    | 预加载开启            | true                                                         |
-| knife4j.enable                   | 启用Knife4j           | true                                                         |
-| knife4j.setting.language         | Knife4j语言设置       | zh_cn                                                        |
-| knife4j.setting.home-custom-path | Knife4j自定义主页路径 |                                                              |
-| knife4j.cors                     | Knife4j跨域配置       | true                                                         |
-| jwt-config.seed-key              | JWT种子密钥           | ad419e9df4fe41ea1c20bee247a28dce6df8c7cd84c642qw3de5b37bf3e5ec5c |
-| http-request.temp-path           | 上传缓存目录          | ./data/cache                                                 |
+| 配置                             | 描述                  | 默认参数     |
+| -------------------------------- | --------------------- | ------------ |
+| springdoc.api-docs.enabled       | 启用Spring文档功能    | true         |
+| springdoc.api-docs.path          | Spring文档路径        | /v3/api-docs |
+| springdoc.swagger-ui.path        | Swagger UI路径        | /docs        |
+| springdoc.packages-to-scan       | Swagger 扫描包路径    | org.web      |
+| springdoc.pre-loading-enabled    | 预加载开启            | true         |
+| knife4j.enable                   | 启用Knife4j           | true         |
+| knife4j.setting.language         | Knife4j语言设置       | zh_cn        |
+| knife4j.setting.home-custom-path | Knife4j自定义主页路径 |              |
+| knife4j.cors                     | Knife4j跨域配置       | true         |
+| http-request.temp-path           | 上传缓存目录          | ./data/cache |
+
+
+
+## 用户校验(JWT)
+
+| 配置                           | 描述             | 默认参数                                                     |
+| ------------------------------ | ---------------- | ------------------------------------------------------------ |
+| jwt-config.seed-key            | JWT种子密钥      | ad419e9df4fe41ea1c20bee247a28dce6df8c7cd84c642qw3de5b37bf3e5ec5c |
+| jwt-config.expire-time         | 校验token(1天)   | 86_400_000                                                   |
+| jwt-config.refresh-expire-time | # 刷新token 30天 | 2_592_000_000                                                |
+
+
 
 ## 数据源配置
 
